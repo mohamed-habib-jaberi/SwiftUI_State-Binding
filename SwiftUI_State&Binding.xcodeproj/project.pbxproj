@@ -13,6 +13,15 @@
 		613DBEB42475F54F0069869A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 613DBEB32475F54F0069869A /* Assets.xcassets */; };
 		613DBEB72475F54F0069869A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 613DBEB62475F54F0069869A /* Preview Assets.xcassets */; };
 		613DBEBA2475F54F0069869A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 613DBEB82475F54F0069869A /* LaunchScreen.storyboard */; };
+		613DBEC62475F6560069869A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBEC52475F6560069869A /* Color+Extensions.swift */; };
+		613DBEC82475F6AC0069869A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBEC72475F6AC0069869A /* User.swift */; };
+		613DBECA2475F6C70069869A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBEC92475F6C70069869A /* Box.swift */; };
+		613DBECC2475F6E40069869A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBECB2475F6E40069869A /* Book.swift */; };
+		613DBECE2475F7290069869A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBECD2475F7290069869A /* SettingsView.swift */; };
+		613DBED02475F7500069869A /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBECF2475F7500069869A /* BookRow.swift */; };
+		613DBED22475F76B0069869A /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBED12475F76B0069869A /* BooksView.swift */; };
+		613DBED42475F7850069869A /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBED32475F7850069869A /* BookDetailView.swift */; };
+		613DBED62475F80B0069869A /* RecommendedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DBED52475F80B0069869A /* RecommendedRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		613DBEB62475F54F0069869A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		613DBEB92475F54F0069869A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		613DBEBB2475F54F0069869A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		613DBEC52475F6560069869A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		613DBEC72475F6AC0069869A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		613DBEC92475F6C70069869A /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		613DBECB2475F6E40069869A /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		613DBECD2475F7290069869A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		613DBECF2475F7500069869A /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
+		613DBED12475F76B0069869A /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
+		613DBED32475F7850069869A /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		613DBED52475F80B0069869A /* RecommendedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 		613DBEAC2475F5490069869A /* SwiftUI_State&Binding */ = {
 			isa = PBXGroup;
 			children = (
+				613DBEC22475F5BC0069869A /* Model */,
+				613DBEC12475F5AC0069869A /* extension */,
 				613DBEAD2475F5490069869A /* AppDelegate.swift */,
 				613DBEAF2475F5490069869A /* SceneDelegate.swift */,
 				613DBEB12475F5490069869A /* ContentView.swift */,
@@ -63,6 +83,11 @@
 				613DBEB82475F54F0069869A /* LaunchScreen.storyboard */,
 				613DBEBB2475F54F0069869A /* Info.plist */,
 				613DBEB52475F54F0069869A /* Preview Content */,
+				613DBECD2475F7290069869A /* SettingsView.swift */,
+				613DBECF2475F7500069869A /* BookRow.swift */,
+				613DBED12475F76B0069869A /* BooksView.swift */,
+				613DBED32475F7850069869A /* BookDetailView.swift */,
+				613DBED52475F80B0069869A /* RecommendedRow.swift */,
 			);
 			path = "SwiftUI_State&Binding";
 			sourceTree = "<group>";
@@ -73,6 +98,24 @@
 				613DBEB62475F54F0069869A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		613DBEC12475F5AC0069869A /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				613DBEC52475F6560069869A /* Color+Extensions.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		613DBEC22475F5BC0069869A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				613DBEC72475F6AC0069869A /* User.swift */,
+				613DBEC92475F6C70069869A /* Box.swift */,
+				613DBECB2475F6E40069869A /* Book.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +190,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				613DBEAE2475F5490069869A /* AppDelegate.swift in Sources */,
+				613DBECE2475F7290069869A /* SettingsView.swift in Sources */,
 				613DBEB02475F5490069869A /* SceneDelegate.swift in Sources */,
+				613DBECC2475F6E40069869A /* Book.swift in Sources */,
 				613DBEB22475F5490069869A /* ContentView.swift in Sources */,
+				613DBECA2475F6C70069869A /* Box.swift in Sources */,
+				613DBED62475F80B0069869A /* RecommendedRow.swift in Sources */,
+				613DBEC82475F6AC0069869A /* User.swift in Sources */,
+				613DBED22475F76B0069869A /* BooksView.swift in Sources */,
+				613DBED42475F7850069869A /* BookDetailView.swift in Sources */,
+				613DBEC62475F6560069869A /* Color+Extensions.swift in Sources */,
+				613DBED02475F7500069869A /* BookRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
