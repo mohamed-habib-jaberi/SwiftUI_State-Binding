@@ -10,12 +10,14 @@ import SwiftUI
 
 struct BookRow: View {
   
-  @Binding var book: Book
+    @Binding var book: Book
+    @ObservedObject var user: User
+    
   var proxy: GeometryProxy
   
   var body: some View {
     
-    NavigationLink(destination: BookDetailView(book: $book)) {
+    NavigationLink(destination: BookDetailView(book: $book, user: user)) {
       
       VStack {
         Text(book.title)

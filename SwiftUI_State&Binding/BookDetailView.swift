@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct BookDetailView: View {
-  
-  @Binding var book: Book
-  
+    
+    @Binding var book: Book
+    @ObservedObject var user: User
+    
   var body: some View {
     VStack {
       
@@ -23,6 +24,18 @@ struct BookDetailView: View {
         
           Button(action: {
                self.book.isLiked.toggle()
+            
+            switch(self.book.isLiked, self.user.likedBooks.firstIndex(of: self.book)){
+                //the book wasn't there, so add it to
+            case(true, nil):
+                self.user.likedBooks.append(self.book)
+             case(false, let index?):
+                //we found this book, so remove it from the array
+                self.user.likedBooks.remove(at: index)
+            default:
+                break
+            }
+            
            }) {
                Text("👍 Like")
                    .padding()
@@ -38,6 +51,6 @@ struct BookDetailView: View {
 struct BookDetailView_Previews: PreviewProvider {
   
   static var previews: some View {
-    BookDetailView(book: .constant(Book.demoBooks.randomElement()!) )
+    BookDetailView(book: .constant(Book.demoBooks.randomElement()!), user: User.exampleUser )
   }
 }
