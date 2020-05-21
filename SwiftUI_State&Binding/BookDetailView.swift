@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BookDetailView: View {
   
-  var book: Book
+  @Binding var book: Book
   
   var body: some View {
     VStack {
@@ -20,6 +20,16 @@ struct BookDetailView: View {
         .resizable()
         .aspectRatio(contentMode: .fit)
         .scaledToFit()
+        
+          Button(action: {
+               self.book.isLiked.toggle()
+           }) {
+               Text("👍 Like")
+                   .padding()
+                   .foregroundColor(book.isLiked ? .secondary : .primary)
+                   .background(book.isLiked ? Color.myGreen : Color.white)
+                   .cornerRadius(10)
+           }
       
     }
   }
@@ -28,6 +38,6 @@ struct BookDetailView: View {
 struct BookDetailView_Previews: PreviewProvider {
   
   static var previews: some View {
-    BookDetailView(book: Book.demoBooks.randomElement()!)
+    BookDetailView(book: .constant(Book.demoBooks.randomElement()!) )
   }
 }

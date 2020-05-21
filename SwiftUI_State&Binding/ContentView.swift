@@ -11,10 +11,11 @@ import SwiftUI
 import SwiftUI
 
 struct ContentView: View {
-  @State private var isPresented = false
-  var selectedBook: Book? = nil
-  var books: [Book] = Book.demoBooks
-  
+    
+    @State private var isPresented = false
+    @State var selectedBook: Book? = nil
+    @State var books = Box(Book.demoBooks)
+    
   @State private var user: User = User.exampleUser
 
   var body: some View {
@@ -23,10 +24,10 @@ struct ContentView: View {
       
       ZStack {
         VStack {
-          RecommendedRow(book: books.randomElement()!)
+            RecommendedRow(book: $books.value[books.value.indices.randomElement()!])
           
           ScrollView(.horizontal, showsIndicators: false) {
-            BooksView()
+            BooksView(books: $books.value)
           
           }
           .shadow(color: .black, radius: 10, x: 20, y: 20)

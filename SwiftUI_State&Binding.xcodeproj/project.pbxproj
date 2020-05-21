@@ -79,15 +79,16 @@
 				613DBEAD2475F5490069869A /* AppDelegate.swift */,
 				613DBEAF2475F5490069869A /* SceneDelegate.swift */,
 				613DBEB12475F5490069869A /* ContentView.swift */,
-				613DBEB32475F54F0069869A /* Assets.xcassets */,
-				613DBEB82475F54F0069869A /* LaunchScreen.storyboard */,
-				613DBEBB2475F54F0069869A /* Info.plist */,
-				613DBEB52475F54F0069869A /* Preview Content */,
+				613DBEC92475F6C70069869A /* Box.swift */,
 				613DBECD2475F7290069869A /* SettingsView.swift */,
 				613DBECF2475F7500069869A /* BookRow.swift */,
 				613DBED12475F76B0069869A /* BooksView.swift */,
 				613DBED32475F7850069869A /* BookDetailView.swift */,
 				613DBED52475F80B0069869A /* RecommendedRow.swift */,
+				613DBEB32475F54F0069869A /* Assets.xcassets */,
+				613DBEB82475F54F0069869A /* LaunchScreen.storyboard */,
+				613DBEBB2475F54F0069869A /* Info.plist */,
+				613DBEB52475F54F0069869A /* Preview Content */,
 			);
 			path = "SwiftUI_State&Binding";
 			sourceTree = "<group>";
@@ -112,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				613DBEC72475F6AC0069869A /* User.swift */,
-				613DBEC92475F6C70069869A /* Box.swift */,
 				613DBECB2475F6E40069869A /* Book.swift */,
 			);
 			path = Model;

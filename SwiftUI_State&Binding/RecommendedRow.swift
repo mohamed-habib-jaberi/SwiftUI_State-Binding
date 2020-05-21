@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RecommendedRow: View {
   
-  var book: Book
+ @Binding var book: Book
   
   var body: some View {
     
@@ -38,6 +38,6 @@ struct RecommendedRow: View {
 
 struct RecommendedRow_Previews: PreviewProvider {
   static var previews: some View {
-    RecommendedRow(book: Book.demoBooks.randomElement()!)
+    RecommendedRow(book: .constant(Book.demoBooks.randomElement()!))
   }
 }

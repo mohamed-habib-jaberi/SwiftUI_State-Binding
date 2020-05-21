@@ -15,7 +15,7 @@ struct BookRow: View {
   
   var body: some View {
     
-    NavigationLink(destination: BookDetailView(book: book)) {
+    NavigationLink(destination: BookDetailView(book: $book)) {
       
       VStack {
         Text(book.title)

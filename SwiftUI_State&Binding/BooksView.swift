@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BooksView: View {
   
-  @State var books = Book.demoBooks
+    @Binding var books : [Book]
   
   var body: some View {
     HStack {
@@ -30,6 +30,6 @@ struct BooksView: View {
 struct BooksView_Previews: PreviewProvider {
   
   static var previews: some View {
-    BooksView(books: Book.demoBooks)
+    BooksView(books: .constant(Book.demoBooks) )
   }
 }
